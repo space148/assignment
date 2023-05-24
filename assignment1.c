@@ -1,0 +1,22 @@
+#include <stdio.h>
+int main() {
+    int a[]={1,2,3};
+    int b[]={10,20,30};
+    int size_a=sizeof(a)/sizeof(a[0]);
+    int size_b=sizeof(b)/sizeof(b[0]);
+    int size_c=size_a+size_b;
+    int i;
+    int c[size_c];
+    for (i=0;i<size_a;i++) {
+        c[i]=a[i];
+    }
+    for (i=0;i<size_b;i++) {
+        c[size_a+i]=b[i];
+    }
+    printf("Merged array c: ");
+    for (i=0;i<size_c;i++) {
+        printf("%d ",c[i]);
+    }
+    printf("\n");
+    return 0;
+}
